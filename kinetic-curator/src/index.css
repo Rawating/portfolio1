@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Manrope:wght@400;500;600&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #131313;
+  --surf: #1C1B1B;
+  --surf2: #2A2A2A;
+  --surf3: #353534;
+  --fg: #E5E2E1;
+  --muted: #9A9A9A;
+  --primary: #FF5757;
+  --teal: #5BDCB4;
+  --line: rgba(229, 226, 225, 0.11);
+}
+
+html { scroll-behavior: smooth; }
+
+body, #root {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Manrope', sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Each page section fills exactly the viewport minus navbar */
+.pg {
+  width: 100%;
+  height: calc(100vh - 56px);
+  overflow: hidden;
+}
+
+/* Avatar pulse ring */
+@keyframes ring {
+  0%, 100% { opacity: 0.2; }
+  50%       { opacity: 0.55; }
+}
+
+/* Skill bar fill */
+.sk-fill { transition: width 0.8s ease; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--surf2); border-radius: 3px; }
