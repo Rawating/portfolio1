@@ -43,19 +43,7 @@ export const About: React.FC<AboutProps> = ({ onNav }) => (
       <div style={{ color: 'var(--teal)', fontSize: 12, fontWeight: 700, marginBottom: 14 }}>{OWNER.school}</div>
       <div style={{ color: 'var(--primary)', fontSize: 18, marginBottom: 22, letterSpacing: 2 }}>★★★★★</div>
 
-      {/* Stats */}
-      <div style={{
-        display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', width: '100%',
-        padding: '18px 0', borderTop: '1px solid var(--line)', borderBottom: '1px solid var(--line)',
-        marginBottom: 22,
-      }}>
-        {[['3','Projects'],['2','Internships'],['1','NSF Grant']].map(([n,l]) => (
-          <div key={l} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 3 }}>
-            <span style={{ fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 900, fontSize: 28 }}>{n}</span>
-            <span style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '.08em', color: 'var(--muted)', fontWeight: 700 }}>{l}</span>
-          </div>
-        ))}
-      </div>
+
 
       <button onClick={() => onNav('Resume')} style={{ background: 'var(--primary)', color: '#fff', border: 'none', borderRadius: 11, padding: '13px 0', width: '100%', fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 14, cursor: 'pointer', marginBottom: 9 }}>View Resume</button>
       <button onClick={() => onNav('Contact')} style={{ background: 'transparent', color: 'var(--fg)', border: '1px solid var(--line)', borderRadius: 11, padding: '13px 0', width: '100%', fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 14, cursor: 'pointer' }}>Contact Me</button>
