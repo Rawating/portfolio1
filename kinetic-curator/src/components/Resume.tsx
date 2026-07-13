@@ -1,6 +1,5 @@
 import React from 'react'
-import { EDUCATION, EXPERIENCES, SKILLS, OWNER } from '../constants'
-
+import { EDUCATION, EXPERIENCES, SKILLS } from '../constants'
 const ColTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <div style={{ fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 800, fontSize: 28, letterSpacing: '-1.2px', marginBottom: 28, display: 'flex', alignItems: 'center', gap: 16 }}>
     {children}
