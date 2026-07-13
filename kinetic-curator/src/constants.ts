@@ -4,7 +4,7 @@
 export const OWNER = {
   name:     'Pranjal Rawat',
   role:     'Software Engineer Intern @ TechX',
-  school:   "Georgia Tech · CS '28",
+  school:   "Georgia Institute of Technology · CS '28",
   email:    'pranjalrawat72008@gmail.com',
   phone:    '984-389-5618',
   github:   'https://github.com/Rawating',
@@ -59,9 +59,21 @@ export const PROJECTS = [
 export const EXPERIENCES = [
   {
     id:       1,
+    title:    'Data Science Intern',
+    company:  'ThinkDigits Inc.',
+    period:   'June 2026 – August 2026',
+    location: 'Remote',
+    bullets:  [
+      'Engineered a predictive maintenance pipeline in Python (pandas, matplotlib) that ingested 1,237 production records and 2.24M sensor readings across 12 machines, identifying the top two cost drivers at $900K and $860K.',
+      'Automated detection of mechanical failure patterns across shift, machine, and item dimensions by building an EDA pipeline processing 6 months of minute-level industrial sensor data, reducing manual analysis time.',
+      'Delivered 25+ production-ready visualizations including correlation heatmaps, downtime event zoom windows, and dual-axis sensor trend charts, surfacing key relationships between operating conditions and equipment failures.',
+    ],
+  },
+  {
+    id:       2,
     title:    'Software Engineer Intern',
     company:  'TechX',
-    period:   'Jan 2026 – Present',
+    period:   'Jan 2026 – May 2026',
     location: 'Remote',
     bullets:  [
       'Designed a Startup Idea Validator Agent using AI for market analysis, competitor intelligence, and risk evaluation.',
@@ -70,19 +82,18 @@ export const EXPERIENCES = [
     ],
   },
   {
-    id:       2,
+    id:       3,
     title:    'Research & Development Intern',
     company:  'EdMotion',
     period:   'Jun 2024 – Nov 2024',
     location: 'Fuquay-Varina, NC',
     bullets:  [
-      'Contributed to a mixed reality platform for therapeutic interventions for high school students.',
+      'Contributed to a mixed reality platform integrating virtual and real-world elements for therapeutic interventions.',
       'Drafted a $50,000 NSF grant proposal aligned with research outcomes and market viability.',
       'Collaborated with a cross-disciplinary team of engineers, educators, and mental health professionals.',
     ],
   },
 ];
-
 // ─── EDUCATION ────────────────────────────────────────────────────────────────
 export const EDUCATION = [
   {
@@ -98,7 +109,7 @@ export const EDUCATION = [
 // ─── SKILLS ───────────────────────────────────────────────────────────────────
 export const SKILLS = {
   languages: ['Python', 'SQL', 'JavaScript', 'HTML/CSS', 'Java'],
-  tools:     ['AWS (EC2, S3)', 'Git', 'ReactJS', 'VS Code', 'Streamlit'],
+  tools:     ['Spring Boot', 'AWS (EC2, S3)', 'Git', 'ReactJS', 'VS Code', 'Streamlit', 'MobaXterm'],
   libraries: ['Pandas', 'NumPy', 'Matplotlib', 'Scikit-learn'],
 };
 
