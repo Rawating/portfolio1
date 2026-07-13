@@ -26,8 +26,12 @@ const socials = [
 
 export const Home: React.FC = () => (
   <div id="Home" className="pg hero-animated" style={{
-    position: 'relative', overflow: 'hidden',
-  }}>
+  position: 'relative',
+  overflow: 'hidden',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+}}>
     {/* Grid overlay */}
     <div style={{
       position: 'absolute', inset: 0, opacity: 0.035,
@@ -51,7 +55,7 @@ export const Home: React.FC = () => (
         fontSize: 11, fontWeight: 700, letterSpacing: '.22em',
         textTransform: 'uppercase', marginBottom: 28,
       }}>
-        Georgia Tech · CS '28 · SWE Intern @ TechX
+        Georgia Tech · CS '28 · Data Science Intern @ ThinkDigits
       </div>
 
       <h1 style={{
