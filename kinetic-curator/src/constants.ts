@@ -3,15 +3,14 @@
 
 export const OWNER = {
   name:     'Pranjal Rawat',
-  role:     'Software Engineer Intern @ TechX',
+  role:     'Data Science & Software Engineering',
   school:   "Georgia Institute of Technology · CS '28",
   email:    'pranjalrawat72008@gmail.com',
   phone:    '984-389-5618',
   github:   'https://github.com/Rawating',
   linkedin: 'https://linkedin.com/in/prawat007',
   location: 'Atlanta, GA',
-  bio:      "I'm a CS student at Georgia Tech (Class of 2028), currently interning as a Software Engineer at TechX — working on AI-powered startup tools, RAG pipelines, multi-agent orchestration, and full-stack AWS deployments. Previously an R&D intern at EdMotion in Fuquay-Varina, NC, contributing to a mixed reality therapeutic platform and co-authoring a $50,000 NSF grant proposal.",
-  // Place your photo at /public/avatar.jpg
+  bio:      "I'm a CS student at Georgia Institute of Technology (Class of 2028) with a passion for both data science and software engineering. Most recently at ThinkDigits Inc., I engineered a predictive maintenance pipeline that processed 2.24M sensor readings across 12 machines, surfacing $1.76M in cost drivers. Before that, at TechX, I built AI-powered startup tools — RAG pipelines, multi-agent orchestration, and full-stack AWS deployments. I love working where data meets product: turning messy real-world signals into software people actually use.",
   avatar:   '/avatar.jpg',
 };
 
@@ -102,7 +101,7 @@ export const EDUCATION = [
     school:   'Georgia Institute of Technology',
     period:   '2024 – Spring 2028',
     location: 'Atlanta, GA',
-    courses:  'OOP, Linear Algebra, Python Fundamentals, Discrete Mathematics for CS, Multivariable Calculus',
+    courses:  'Data Structures & Algorithms, Object-Oriented Programming, Linear Algebra, Python Fundamentals, Discrete Mathematics for CS, Multivariable Calculus',
   },
 ];
 
@@ -114,12 +113,11 @@ export const SKILLS = {
 };
 
 export const SKILL_BARS = [
-  { label: 'Python & AI/ML',              pct: 90 },
-  { label: 'Full Stack (React / Next.js)', pct: 85 },
-  { label: 'AWS & Cloud Infrastructure',  pct: 78 },
-  { label: 'RAG & LLM Integration',       pct: 80 },
+  { label: 'Python, Pandas & Data Analysis',  pct: 92 },
+  { label: 'Machine Learning & AI/RAG',       pct: 84 },
+  { label: 'Full Stack (React / Next.js)',    pct: 85 },
+  { label: 'AWS & Cloud Infrastructure',      pct: 78 },
 ];
-
 // ─── NAV SECTIONS ─────────────────────────────────────────────────────────────
 export const SECTIONS = ['Home', 'About', 'Portfolio', 'Resume', 'Contact'] as const;
 export type SectionId = typeof SECTIONS[number];

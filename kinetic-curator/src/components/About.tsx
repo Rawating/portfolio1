@@ -41,7 +41,6 @@ export const About: React.FC<AboutProps> = ({ onNav }) => (
       <div style={{ fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 800, fontSize: 22, letterSpacing: '-.5px', marginBottom: 5 }}>{OWNER.name}</div>
       <div style={{ color: 'var(--muted)', fontSize: 13, lineHeight: 1.45, marginBottom: 6 }}>{OWNER.role}</div>
       <div style={{ color: 'var(--teal)', fontSize: 12, fontWeight: 700, marginBottom: 14 }}>{OWNER.school}</div>
-      <div style={{ color: 'var(--primary)', fontSize: 18, marginBottom: 22, letterSpacing: 2 }}>★★★★★</div>
 
 
 
@@ -59,8 +58,7 @@ export const About: React.FC<AboutProps> = ({ onNav }) => (
       {/* Info grid */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 12, marginBottom: 32 }}>
         {INFO.map(({ icon, label, val, small, hl }) => (
-          <div key={label} style={{ background: 'var(--surf)', border: `1px solid ${hl ? 'rgba(91,220,180,.22)' : 'var(--line)'}`, borderRadius: 13, padding: '16px 14px' }}>
-            <div style={{ fontSize: 20, marginBottom: 7 }}>{icon}</div>
+          <div key={label} className="glow-card" style={{ background: 'var(--surf)', borderRadius: 13, padding: '16px 14px', ...(hl ? { borderColor: 'rgba(91,220,180,.22)' } : {}) }}>            <div style={{ fontSize: 20, marginBottom: 7 }}>{icon}</div>
             <div style={{ fontSize: 9, textTransform: 'uppercase', letterSpacing: '.12em', color: hl ? 'var(--teal)' : 'var(--muted)', fontWeight: 700, marginBottom: 5 }}>{label}</div>
             <div style={{ fontSize: small ? 12 : 14, fontWeight: 700, color: hl ? 'var(--teal)' : 'var(--fg)', wordBreak: 'break-all', lineHeight: 1.35 }}>{val}</div>
           </div>

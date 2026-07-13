@@ -25,10 +25,8 @@ const socials = [
 ]
 
 export const Home: React.FC = () => (
-  <div id="Home" className="pg" style={{
+  <div id="Home" className="pg hero-animated" style={{
     position: 'relative', overflow: 'hidden',
-    background: 'linear-gradient(140deg, #0d1b2a 0%, #1a1a3e 45%, #0f2a1a 100%)',
-    display: 'flex', alignItems: 'center', justifyContent: 'center',
   }}>
     {/* Grid overlay */}
     <div style={{
@@ -65,12 +63,8 @@ export const Home: React.FC = () => (
         <span style={{ color: 'var(--primary)' }}>{OWNER.name}</span>
       </h1>
 
-      <div style={{
-        color: 'rgba(229,226,225,.48)', fontSize: 20,
-        fontWeight: 500, letterSpacing: '-.4px', marginBottom: 44,
-      }}>
-        Full Stack Developer &amp; AI Builder
-      </div>
+      
+      <TypedRoles />
 
       <div style={{ display: 'flex', justifyContent: 'center', gap: 40 }}>
         {socials.map(({ icon, label, href }) => (
@@ -102,3 +96,37 @@ export const Home: React.FC = () => (
     </div>
   </div>
 )
+const ROLES = ['Data Scientist', 'Software Engineer', 'AI Builder', 'Full Stack Developer']
+
+const TypedRoles: React.FC = () => {
+  const [text, setText] = React.useState('')
+  const [roleIdx, setRoleIdx] = React.useState(0)
+  const [deleting, setDeleting] = React.useState(false)
+
+  React.useEffect(() => {
+    const current = ROLES[roleIdx]
+    const speed = deleting ? 40 : 85
+    const t = setTimeout(() => {
+      if (!deleting) {
+        const next = current.slice(0, text.length + 1)
+        setText(next)
+        if (next === current) setTimeout(() => setDeleting(true), 1400)
+      } else {
+        const next = current.slice(0, text.length - 1)
+        setText(next)
+        if (next === '') { setDeleting(false); setRoleIdx((roleIdx + 1) % ROLES.length) }
+      }
+    }, speed)
+    return () => clearTimeout(t)
+  }, [text, deleting, roleIdx])
+
+  return (
+    <div style={{
+      color: 'rgba(229,226,225,.55)', fontSize: 22, fontWeight: 500,
+      letterSpacing: '-.4px', marginBottom: 44, minHeight: 30,
+      fontFamily: "'Plus Jakarta Sans', sans-serif",
+    }}>
+      {text}<span className="cursor" />
+    </div>
+  )
+}

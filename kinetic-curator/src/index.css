@@ -44,3 +44,50 @@ body, #root {
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--surf2); border-radius: 3px; }
+
+/* ── Scroll reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* ── Card hover glow ── */
+.glow-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 1px solid var(--line);
+}
+.glow-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 44px rgba(255, 87, 87, 0.13);
+  border-color: rgba(255, 87, 87, 0.35);
+}
+
+/* ── Animated hero gradient ── */
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+.hero-animated {
+  background: linear-gradient(140deg, #0d1b2a, #1a1a3e, #0f2a1a, #1a1a3e);
+  background-size: 300% 300%;
+  animation: gradientShift 14s ease infinite;
+}
+
+/* ── Blinking cursor for typing effect ── */
+@keyframes blink { 50% { opacity: 0; } }
+.cursor {
+  display: inline-block;
+  width: 3px; height: 1em;
+  background: var(--primary);
+  margin-left: 4px;
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
+}
