@@ -1,5 +1,5 @@
 import React from 'react'
-import { OWNER, SKILL_BARS } from '../constants'
+import { OWNER } from '../constants'
 import type { SectionId } from '../constants'
 
 interface AboutProps { onNav: (s: SectionId) => void }
@@ -65,21 +65,6 @@ export const About: React.FC<AboutProps> = ({ onNav }) => (
         ))}
       </div>
 
-      {/* Skill bars */}
-      <div style={{ fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 800, fontSize: 22, letterSpacing: '-1px', marginBottom: 20 }}>Technical Skills</div>
-      <div style={{ maxWidth: 680 }}>
-        {SKILL_BARS.map(({ label, pct }) => (
-          <div key={label} style={{ marginBottom: 18 }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 14, fontWeight: 600, marginBottom: 8 }}>
-              <span>{label}</span>
-              <span style={{ color: 'var(--primary)' }}>{pct}%</span>
-            </div>
-            <div style={{ height: 5, background: 'var(--surf2)', borderRadius: 3, overflow: 'hidden' }}>
-              <div className="sk-fill" style={{ width: `${pct}%`, height: '100%', borderRadius: 3, background: 'var(--primary)' }} />
-            </div>
-          </div>
-        ))}
-      </div>
     </section>
   </div>
 )
