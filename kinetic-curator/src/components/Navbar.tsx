@@ -60,7 +60,7 @@ export const Navbar: React.FC<NavbarProps> = ({ active, onNav }) => (
     {/* CTA */}
     <a
       href="/resume.pdf"
-      download="Pranjal_Rawat_Resume.pdf"
+      download="Pranjal_RawatDS.pdf"
       style={{
         background: 'var(--primary)', color: '#fff',
         borderRadius: 999, padding: '8px 22px',
