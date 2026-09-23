@@ -16,6 +16,18 @@ export const OWNER = {
 
 // ─── PROJECTS ─────────────────────────────────────────────────────────────────
 export const PROJECTS = [
+    {
+    id: 0,
+    title:    'PantryUp',
+    category: 'Full Stack',
+    desc:     'Full-stack recipe search app unifying two data sources — TheMealDB API and a 16,500-row Indian recipe dataset — behind a provider layer that normalizes results into one schema. Features AI-powered natural-language ingredient search (Groq/Llama 3.3) that turns plain-language pantry requests into recipe suggestions, plus server-rendered recipe pages, a save-for-later favorites system, and a responsive custom UI.',
+    tags:     ['Next.js', 'React', 'Node.js', 'Groq API', 'Vercel'],
+    color:    '#2a1f0f',
+    emoji:    '🍳',
+    active:   true,
+    github:   'https://github.com/Rawating',
+    demo:     null,
+  },
   {
     id: 1,
     title:    'Notivet',
